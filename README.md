@@ -6,12 +6,14 @@ OpenBB Platform provider extension that serves SEC filing facts from Arkleon /v1
 
 Requires Python 3.10 or later, below 4. The package depends on `openbb-core` (>=1.6.10,<3) and registers the entry point `arkleon` in the `openbb_provider_extension` group.
 
-The package is not yet on PyPI. Install it from GitHub, then rebuild the OpenBB Python interface as the OpenBB docs require after installing a provider extension:
+Install it from PyPI, then rebuild the OpenBB Python interface as the OpenBB docs require after installing a provider extension:
 
 ```
-pip install git+https://github.com/jushuea/openbb-arkleon
+pip install openbb-arkleon
 openbb-build
 ```
+
+For the latest unreleased code, run `pip install git+https://github.com/jushuea/openbb-arkleon` instead of the PyPI install, then run `openbb-build`.
 
 ## Credentials
 
