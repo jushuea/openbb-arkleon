@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "openbb-arkleon"
+version = "0.1.0"
+description = "Arkleon point-in-time SEC fundamentals provider extension for the OpenBB Platform"
+authors = ["Arkleon <founder@arkleon.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "openbb_arkleon" }]
+homepage = "https://arkleon.com"
+repository = "https://github.com/jushuea/openbb-arkleon"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4"
+openbb-core = ">=1.6.10,<3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8"
+
+[build-system]
+requires = ["poetry-core>=1.9"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."openbb_provider_extension"]
+arkleon = "openbb_arkleon:arkleon_provider"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
